@@ -10,6 +10,6 @@ sed -i "s/\$AUTH_SERVICE_PORT/$AUTH_SERVICE_PORT/g" /apps/config/dev/environment
 
 ## start mvn build and the application
 cd /apps
-mvn -s settings.xml clean package
+mvn clean package
 
 java -jar target/ms-maintenance-1.0-SNAPSHOT.jar
