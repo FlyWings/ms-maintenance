@@ -11,9 +11,10 @@ LABEL io.k8s.description="Virtual Vehicle Maintenance Service" \
       io.openshift.tags="builder,service,maintenance" \
       io.openshift.s2i.destination="/opt/s2i/destination"
 
-ADD maintenance /apps/
+COPY ./maintenance/ /apps
 
-RUN chmod -R go+rw /apps
+RUN chmod -R go+rw /apps && \
+	chmod +x /apps/start.sh
 
 WORKDIR /apps	
 ENTRYPOINT ["/bin/bash", "./start.sh"]
