@@ -13,8 +13,7 @@ LABEL io.k8s.description="Virtual Vehicle Maintenance Service" \
 
 ADD maintenance /apps/
 
-RUN chmod -R go+rw /apps && \
-	chmod +x /apps/start.sh
+RUN chmod -R go+rw /apps
 
 WORKDIR /apps	
 ENTRYPOINT ["/bin/bash", "./start.sh"]
