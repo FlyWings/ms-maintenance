@@ -1,3 +1,4 @@
+#!/bin/sh
 cd /opt/s2i/destination/src/vehicle
 
 sed -i "s/\$MONGODB_SERVICE_HOST/$MONGODB_SERVICE_HOST/g" config/dev/environment.properties
