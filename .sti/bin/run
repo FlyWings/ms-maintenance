@@ -1,6 +1,6 @@
 #!/bin/sh
 echo `whoami`
-/bin/bash
+sleep 3600
 #chmod -R go+rwx $HOME
 
 #cd $HOME/vehicle
