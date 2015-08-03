@@ -1,7 +1,7 @@
 #!/bin/sh
-chmod -R go+rwx /opt/s2i/destination/src/vehicle
+chmod -R go+rwx $HOME
 
-cd /opt/s2i/destination/src/vehicle
+cd $HOME/vehicle
 
 sed -i "s/\$MONGODB_SERVICE_HOST/$MONGODB_SERVICE_HOST/g" config/dev/environment.properties
 sed -i "s/\$MONGODB_SERVICE_PORT/$MONGODB_SERVICE_PORT/g" config/dev/environment.properties
