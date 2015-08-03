@@ -1,4 +1,5 @@
 #!/bin/sh
+echo `whoami`
 chmod -R go+rwx $HOME
 
 cd $HOME/vehicle
