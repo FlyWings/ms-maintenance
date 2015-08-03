@@ -1,15 +1,16 @@
 #!/bin/sh
 echo `whoami`
-chmod -R go+rwx $HOME
+/bin/bash
+#chmod -R go+rwx $HOME
 
-cd $HOME/vehicle
+#cd $HOME/vehicle
 
-sed -i "s/\$MONGODB_SERVICE_HOST/$MONGODB_SERVICE_HOST/g" config/dev/environment.properties
-sed -i "s/\$MONGODB_SERVICE_PORT/$MONGODB_SERVICE_PORT/g" config/dev/environment.properties
-sed -i "s/\$AUTH_SERVICE_HOST/$AUTH_SERVICE_HOST/g" config/dev/environment.properties
-sed -i "s/\$AUTH_SERVICE_PORT/$AUTH_SERVICE_PORT/g" config/dev/environment.properties
+#sed -i "s/\$MONGODB_SERVICE_HOST/$MONGODB_SERVICE_HOST/g" config/dev/environment.properties
+#sed -i "s/\$MONGODB_SERVICE_PORT/$MONGODB_SERVICE_PORT/g" config/dev/environment.properties
+#sed -i "s/\$AUTH_SERVICE_HOST/$AUTH_SERVICE_HOST/g" config/dev/environment.properties
+#sed -i "s/\$AUTH_SERVICE_PORT/$AUTH_SERVICE_PORT/g" config/dev/environment.properties
 
 
-mvn clean package
+#mvn clean package
 
-java -jar target/ms-maintenance-1.0-SNAPSHOT.jar
+#java -jar target/ms-maintenance-1.0-SNAPSHOT.jar
